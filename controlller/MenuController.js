@@ -86,3 +86,13 @@ exports.orderMenu = async (req, res) => {
         res.status(500).json({ message: 'Error placing order' });
     }
 };
+
+exports.getAllOrders = async (req, res) => {
+    try {
+        const orders = await Order.find();
+        res.json(orders);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ message: 'Error fetching orders' });
+    }
+};

@@ -33,6 +33,10 @@ router.delete('/:id', menuController.deleteMenu);
 
 router.post('/order', menuController.orderMenu);
 
+router.get('/orders', menuController.getAllOrders);
+
+
+
 // Add more routes for updating, deleting, or specific menu actions as needed
 
 module.exports = router;
